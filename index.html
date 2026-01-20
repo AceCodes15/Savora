@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    *{
+ margin: 0%; 
+ padding: 0%;
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+}
+body{
+    height: 800vh;
+}
+.navi{
+    height: 110px;
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    display:flex ;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 90px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    
+}
+
+.navi h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    color: #291812;
+    font-size: 36px;
+    margin-left: 5rem;
+}
+.navi nav ul{
+    height: 110px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.navi nav ul li a{
+    text-decoration: none;
+    color: #291812;
+    transition: .2s;
+    font-family: sans-serif;
+}
+.navi nav ul li a:hover{
+    text-decoration: none;
+    color:#EB5F2D;
+}
+.navi nav ul li:nth-child(1) a{
+    text-decoration: none;
+    color: #EB5F2D;
+}
+.navi button a{
+    text-decoration: none;
+    color: white;
+    
+}
+.navi button:hover a{
+    text-decoration: none;
+    color: white;
+    
+}
+.navi button{
+  background-color: #EB5F2D;
+  border: none;
+  border-radius:30px ;
+  height: 40px;
+  width: 150px;
+  transition: .2s;
+}
+.navi button:hover{
+  background-color: #eb602dd0;
+ 
+}
+.navi nav ul li{
+    list-style: none;
+}
+
+.navi nav ul li:nth-child(6) ul{
+    position: absolute;
+    border-radius:3% ;
+    background-color: white;
+    height: 280px;
+    width: 240px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: block;
+    /* justify-content:center; */
+    align-items: baseline;
+    gap: 35px;
+    flex-direction: column;
+    color: #291812;
+    transition: 1s;
+    display: none;
+    /* top:80px; */
+}
+.navi nav ul li:hover ul{
+    display: flex;
+}
+.navi nav ul li:hover .aos{
+    display: flex;
+}
+.navi nav ul li ul li {
+    margin-left:1rem ;
+    
+}
+.navi nav ul li ul li a{
+    text-decoration: none;
+    color: #291812;
+    transition: .2s;
+}
+.navi nav ul li ul li:nth-child(1) a{
+    text-decoration: none;
+    color: #291812;
+    transition: .2s;
+}
+.navi nav ul li ul li a:hover{
+    text-decoration: none;
+    color:#EB5F2D;
+}
+.navi nav ul li ul li:nth-child(2) ul{
+    left: 100px;
+    /* top: 70px; */
+    height: 280px;
+    width: 240px;
+    display: none;
+   
+}
+.navi nav ul li ul li:nth-child(2):hover ul{
+    
+    display: flex;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.maina{
+    margin-top: 110px;
+    height: 120vh;
+    width: 100%;
+    background-color: #FFF9F7;
+    display: flex;
+}
+.macho{
+    height: 100%;
+    width: 50%;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.machoa{
+    height: 70%;
+    width: 80%;
+    /* background-color: aqua; */
+}
+.hh{
+    height: fit-content;
+    width: fit-content;
+    /* background-color: khaki; */
+    
+}
+.hh h1{
+   font-size: 63px;
+    color: #291812;
+     font-family: "Playfair Display", serif;
+}
+.hh p{
+ font-family: sans-serif ; 
+ color: #5D544F;
+ word-spacing: 1px;
+ font-size: large;
+ 
+}
+.jj{
+    height: 38.2%;
+    width: 100%;
+    /* background-color:aquamarine; */
+}
+.j1{
+    width: 100%;
+    height: 50%;
+    /* background-color: azure; */
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 30px;
+}
+.j1 button{
+  background-color: #EB5F2D;
+  border: none;
+  border-radius:30px ;
+  height: 54px;
+  width: 180px;
+  transition: .1s;
+
+}
+.j1 button:hover{
+  background-color: #eb602dd0;
+  margin-bottom: 4px;
+  transition: .1s;
+ 
+}
+
+.j1 button:hover a{
+  /* background-color: #eb602dd0; */
+  margin-bottom: 2px;
+  transition: .1s;
+ 
+}
+.j1 button a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-family: sans-serif;
+    
+}
+.j1 button:hover a{
+    text-decoration: none;
+    color: white; }
+.j1 button:hover{
+    background-color:#cd4818;
+ }
+.j1 button:nth-child(2){
+   background-color: #FFF9F7;
+  border: #eb602dd0 3px solid;
+  border-radius:30px ;
+  height: 54px;
+  width: 180px;
+  transition: .2s;
+}
+.j1 button:nth-child(2):hover{
+  background-color: #EB6535;
+ 
+}
+.j1 button:nth-child(2) a{
+    text-decoration: none;
+    color:#eb602dd0;
+    font-size: larger;
+    font-family: sans-serif;
+    
+}
+.j1 button:nth-child(2) a{
+    text-decoration: none;
+    color:#eb602dd0; }
+
+.j1 button:nth-child(2):hover a{
+    text-decoration: none;
+    color: white; }
+
+.j2{
+height: 50%;
+width: 100%;
+/* background-color: black; */
+display: flex;
+
+
+}
+.jjjj{
+    height: 100%;
+    width: 50%;
+    /* background-color: aqua; */
+    display: flex;
+
+}
+.jjhh{
+    height: 100%;
+    width: 50%;
+    /* background-color: khaki; */
+    display: flex;
+
+}
+.font{
+    height: 100%;
+    width: 20%;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.font i{
+   font-size: 25px;
+   color:#EB5F2D;
+
+}
+.ftft{
+    height: 100%;
+    width: 80%;
+    /* background-color: yellowgreen; */
+}
+.ft1{
+    width: 100%;
+    height: 50%;
+    /* background-color: tomato; */
+    position: relative;
+}
+.ft1 p{
+   position: absolute;
+   bottom: 0%;
+   font-family: sans-serif ; 
+ color: #5D544F;
+ /* word-spacing: 1px; */
+ font-size:small;
+}
+.ft2{
+    width: 100%;
+    height: 50%;
+     /* background-color: tomato; */
+    position: relative;
+}
+.ft2 p{
+   position: absolute;
+   bottom: 50%;
+   font-family: sans-serif ; 
+ /* color: #5D544F; */
+ /* word-spacing: 1px; */
+ font-size:16px;
+}
+
+
+
+.nacho{
+    height: 100%;
+    width: 50%;
+    /* background-color: beige; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+    
+}
+.imggg{
+     height: 400px;
+    width: 500px;
+    /* background-color: red; */
+    position: absolute;
+    top: 12%;
+       overflow: hidden;
+          border-radius: 3%;
+}
+.bigimg{
+    height: 40px;
+    width: 550px;
+    background-color: red;
+ 
+ 
+    background-image: url(./images/11.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+
+}
+.bigimg{
+    height: 400px;
+    width: 550px;
+    top: 12%;
+    border-radius: 3%;
+    transition: .2s ease-in-out;
+
+
+}
+.bigimg:hover{
+    transform: scale(1.1);
+}
+.smallimg{
+    height: 120px;
+    width: 125px;
+    position: absolute;
+    /* background-color:black; */
+    border-radius: 6%;
+    border: white 4px solid;
+    right: 10%;
+    top: 20%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     overflow: hidden;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+     animation: move 2s infinite linear forwards ;
+    
+
+}
+@keyframes move {
+     0%{
+            margin-bottom: 1rem;
+        }
+       
+        25%{
+            margin-bottom: 2rem;
+        }
+        50%{
+            margin-bottom: 3rem;
+        }
+        75%{
+            margin-top: 1rem;
+        }
+        100%{
+            margin-top: 0rem;
+        }
+     
+   
+    
+}
+.imgimgg{
+     /* animation: move 3s infinite linear ; */
+    height: 100%;
+    width: 100%;
+      border-radius: 2%;
+      background-image: url(./images/13.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+     transition: .2s ease-in-out;
+}
+.smallimg:hover .imgimg{
+    transform: scale(1.1);}
+.smallimgg{
+    height: 120px;
+    width: 125px;
+    position: absolute;
+    /* background-color:black; */
+    border-radius: 6%;
+    border: white 4px solid;
+    right: 85%;
+    bottom: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     overflow: hidden;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+     animation: movee 2s infinite linear forwards ;
+    
+
+}
+@keyframes movee {
+     0%{
+            margin-top: 1rem;
+        }
+       
+        25%{
+            margin-top: 1.5rem;
+        }
+        50%{
+            margin-top: 2.5rem;
+        }
+        75%{
+            margin-bottom: 1.5rem;
+        }
+        100%{
+            margin-bottom: 0rem;
+        }
+     
+   
+    
+}
+.imgimg{
+     /* animation: move 3s infinite linear ; */
+    height: 100%;
+    width: 100%;
+      border-radius: 2%;
+      background-image: url(./images/12.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+     transition: .2s ease-in-out;
+}
+.smallimgg:hover .imgimgg{
+    transform: scale(1.1);
+}
+
+
+
+.main2{
+    height: 110vh;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.chefimg{
+    height: 84%;
+    width: 45%;
+    background-color: #291812;
+    background: url(./images/chef-3.webp);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%;
+    border-radius: 1%;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin-left: 1rem; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    position: relative;
+    
+
+}
+.abtchef{
+    height: 100px;
+    width: 230px;
+    background-color: #E05B2C;
+    position: absolute;
+    right: 5%;
+    border-radius: 10px;
+    top: 8%;
+    box-shadow: #eb602dab 0px 1px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.abtchef h2{
+    color: white;
+    font-family: sans-serif;
+}
+.abtchef p{
+    color: white;
+     font-family: sans-serif;
+}
+.texttxt{
+    height: 100%;
+    width: 50%;
+    /* background-color: rgb(125, 88, 62); */
+    position: relative;
+}
+
+.meet{
+    height: 300px;
+    width: 80%;
+    position: absolute;
+    /* background-color: violet; */
+    right: 13%;
+    top: 10%;
+    /* display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center; 
+    
+
+}
+.meet h1{
+    color: #291812;
+    /* font-family: sans-serif; */
+    font-size: 39px;
+     font-family: "Playfair Display", serif;
+}
+.meet h3{
+    color:#EB5F2D;
+    /* font-family: sans-serif; */
+    
+}
+.meet p{
+    font-family: sans-serif ; 
+ color: #5D544F;
+ word-spacing: 1px;
+ font-size:medium;
+    
+}
+.achi{
+    width: 80%;
+    height: 10%;
+    right: 13%;
+    /* background-color: antiquewhite; */
+    position: absolute;
+    top: 52%;
+     /* border-radius: 20px; */
+    display: flex;
+}
+.award{
+    height: 100%;
+    width: 50%;
+    /* background-color: thistle; */
+    display: flex;
+    /* justify-content: center; */
+    gap: 10px;
+    align-items: center;
+}
+.fon{
+    height: 100%;
+    width: 15%;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fon i{
+   color: #EB5F2D;
+   font-size: larger;
+}
+.recog{
+       height: 100%;
+    width: 50%;
+    /* background-color:tan; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* border-radius: 20px; */
+}
+.qut{
+    position: absolute;
+    height: 180px;
+    width: 500px;
+    background-color:#FEF7F4;
+    border-radius: 10px;
+    right: 13%;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: rgba(235, 95, 45, 0.4) -5px 5px,
+rgba(235, 95, 45, 0.3) -10px 10px,
+rgba(235, 95, 45, 0.2) -15px 15px,
+rgba(235, 95, 45, 0.1) -20px 20px,
+rgba(235, 95, 45, 0.05) -25px 25px;
+; */
+box-shadow: #EB5F2D -5px 0px 0px 0px;
+    top: 65%;
+}
+.qut q{
+    font-size: medium;
+    font-family:sans-serif ;
+    margin-top:1rem ;
+    margin-left: 1rem;
+}
+.qut strong{
+    /* font-size: medium; */
+    font-family:sans-serif ;
+    /* margin-top:1rem ; */
+    margin-left: 1rem;
+}
+.last{
+    height: 150px;
+    width: 400px;
+    position: absolute;
+    bottom: -7%;
+    left: 8%;
+    /* background-color: salmon; */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+.last button{
+    background-color: #EB5F2D;
+    border: none;
+    height: 50px;
+    width: 150px;
+     border-radius: 10px;
+     transition: .1s;
+}
+.last button a{
+   color: white;
+   text-decoration: none ;
+   font-family: sans-serif;
+}
+.last button:hover{
+    margin-top: -4px;
+    background-color: #ae380e;
+}
+.last button:nth-child(2){
+    background-color:white;
+    border: #EB5F2D solid 3px;
+    height: 50px;
+    width: 150px;
+     border-radius: 10px;
+     transition: .1s;
+}
+.last  button:nth-child(2) a{
+   color: #EB5F2D;
+   text-decoration: none ;
+   font-family: sans-serif;
+}
+.last  button:nth-child(2):hover{
+    margin-top: -4px;
+    background-color: #EB5F2D;
+}
+.last  button:nth-child(2):hover a{
+    margin-top: -4px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main3{
+    height: 60vh;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;;
+
+}
+.cimg{
+    height: 70%;
+    background-color: crimson;
+    width: 28%;
+    border-radius:5% ;
+    overflow: hidden;
+    position: relative;  
+  transition: 0.2s ease ;
+}
+.cimg:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+
+}
+.cimg:nth-child(1){
+    height: 70%;
+    background-color: crimson;
+    width: 28%;
+    border-radius:5% ;
+    background: url(./images/11.webp);
+    background-position:60% ;
+    background-size:cover;
+}
+.cimg:nth-child(2){
+    height: 70%;
+    background-color: crimson;
+    width: 28%;
+    border-radius:5% ;
+    background: url(./images/12.webp);
+    background-position:60% ;
+    background-size:cover;
+}
+.cimg:nth-child(3){
+    height: 70%;
+    background-color: crimson;
+    width: 28%;
+    border-radius:5% ;
+    background: url(./images/misc-7.webp);
+    background-position:60% ;
+    background-size:cover;
+   
+
+
+}
+.data{
+    position: absolute;
+    bottom: -20%;
+    left: 2%;
+   transition: 0.3s ease;
+   z-index: 5;
+
+
+
+
+    /* background-color: #EB5F2D; */
+    
+}
+.cimg:hover .data{
+    
+    bottom: 3%;
+}
+.cimg:hover{
+    
+    margin-top: -4px;
+}
+.cimg:hover::after{
+    
+    margin-top: -4px;
+}
+.data h3{
+    
+color: white;
+}
+.data p{
+    
+color:rgba(255, 255, 255, 0.811);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main4{
+    height: 200vh;
+    width: 100%;
+    /* background-color: black; */
+    position: relative;
+
+}
+.baab{
+    height: fit-content;
+    width: fit-content;
+    /* background-color: aqua; */
+    margin: auto;
+    margin-top: 1rem;
+    position: relative;
+
+}
+.baab::before{
+    content: "";
+    height: 1px;
+    width:200%;
+    position: absolute;
+    background-color: #AEAAA8;
+    bottom: -30%;
+    left: -50%;
+}
+.baab::after{
+    content: "";
+    height: 2px;
+    width:100%;
+    position: absolute;
+    background-color:#EB5F2D;
+    bottom: -31%;
+    left: 0%;
+}
+.main4 p{
+       position: absolute;
+    color:#5D544F;
+    left: 25%;
+    top: 8%;
+    font-family: sans-serif;
+   
+}
+.butt4{
+    height: 150px;
+    width: 100%;
+    /* background-color: violet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.butt4 button{
+    height: 50px;
+    width: 10%;
+    border: #E1DFDF 2px solid;
+    border-radius: 40px;
+    background-color: white;
+      transition: 0.2s;
+
+}
+.butt4 button:hover{
+    height:48px;
+    width: 10%;
+    border: #EB5F2D 2px solid;
+    border-radius: 40px;
+    background-color:#EB5F2D;
+    /* transition: 0.1s; */
+    margin-top:-4px ;
+    box-shadow:
+  rgba(235, 95, 45, 0.5) 0px 20px 40px -15px,
+  rgba(0, 0, 0, 0.15) 0px 10px 25px -20px;
+
+}
+.butt4 button:hover a{
+color: white;
+
+}
+.butt4 button:nth-child(2){
+    /* height: 50px; */
+    width: 13%;
+    /* border:#EB6535 2px solid; */
+    border-radius: 40px;
+
+}
+.butt4 button:nth-child(1){
+    /* height: 50px; */
+    width: 13%;
+    border:#EB6535 2px solid;
+    border-radius: 40px;
+    background-color: #EB5F2D;
+    box-shadow:
+  rgba(235, 95, 45, 0.5) 0px 20px 40px -15px,
+  rgba(0, 0, 0, 0.15) 0px 10px 25px -20px;
+
+
+}
+.butt4 button:hover:nth-child(1){
+    height: 50px;
+    width: 13%;
+    border:#EB6535 2px solid;
+    border-radius: 40px;
+    background-color: #EB5F2D;
+    
+
+}
+.butt4 button:nth-child(1) a{
+  color: white;
+
+}
+.butt4 button a{
+    text-decoration: none;
+    color:#352A26 ;
+    font-size: larger;
+}
+
+.imgmo{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: slateblue; */
+}
+.i1m1{
+    height: 98%;
+    width: 43%;
+    /* background-color: teal; */
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.tpimg123{
+    height: 57%;
+    width: 100%;
+    /* background-color: #291812; */
+    border-radius:20px 20px 0px 0px  ;
+    overflow: hidden;
+
+}
+.tpimg123:hover .bgstts{
+transform: scale(1.1);
+}
+.tpimg123:hover .bgsttsss{
+transform: scale(1.1);
+}
+.tpimg123:hover .bgstttss{
+transform: scale(1.1);
+}
+.tpimg123:hover .bgsttss{
+transform: scale(1.1);
+}
+.bgstts{
+    height: 100%;
+    width: 100%;
+     border-radius: 20px;
+     background: url(./images/starter-1.webp);
+     background-size: cover;
+     background-position: 60%;
+     border-radius:20px 20px 0px 0px  ;
+     transition: .3s;
+
+}
+.bgsttsss{
+    height: 100%;
+    width: 100%;
+     border-radius: 20px;
+     background: url(./images/starter-2.webp);
+     background-size: cover;
+     background-position: 60%;
+     border-radius:20px 20px 0px 0px  ;
+       transition: .3s;
+
+}
+.bgstttss{
+    height: 100%;
+    width: 100%;
+     border-radius: 20px;
+     background: url(./images/starter-3.webp);
+     background-size: cover;
+     border-radius:20px 20px 0px 0px  ;
+     background-position: 60%;
+       transition: .3s;
+
+}
+.bgsttss{
+    height: 100%;
+    width: 100%;
+     border-radius: 20px;
+     background: url(./images/starter-4.webp);
+     background-size: cover;
+     background-position: 60%;
+     border-radius:20px 20px 0px 0px  ;
+       transition: .3s;
+
+}
+.btmtext{
+    height: 43%;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+   position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.abso{
+    height: 35px;
+    width: 110px;
+    border-radius: 20px;
+    background-color: #EB5F2D;
+    position: absolute;
+    /* top: 3%;
+    left: 3%; */
+    z-index: 20;
+ box-shadow:
+  /* right emphasis */
+  rgba(235, 95, 45, 0.95) 20px 25px 50px -8px,
+
+  /* left emphasis */
+  rgba(235, 95, 45, 0.85) -20px 25px 50px -8px,
+
+  /* bottom glow */
+  rgba(235, 95, 45, 0.9) 0px 35px 60px -10px,
+
+  /* subtle depth */
+  rgba(0, 0, 0, 0.2) 0px 20px 40px -25px;
+
+   margin-top: 1rem;
+   margin-left: 1rem;
+  
+}
+.abso h3{
+    color: white;
+    font-size: small;
+     position: absolute;
+     top: 26%;
+     left: 14%;
+     font-family: sans-serif;
+     letter-spacing: .1px;
+
+}
+.textime{
+height:70%;
+width: 89%;
+top: 8%;
+/* background-color: aqua; */
+position: absolute;
+left: 3%;
+
+}
+.timeimg{
+height:16%;
+width: 6%;
+top: 8%;
+/* background-color: pink; */
+position: absolute;
+right: 3%;
+background-image: url(./images/Microsoft-Fluentui-Emoji-Flat-Fire-Flat.512.png);
+background-size: 100% 100%;
+
+}
+.timetxt{
+height:16%;
+width: 6%;
+bottom: 8%;
+/* background-color: pink; */
+position: absolute;
+right: 4%;
+/* background-image: url(./images/Microsoft-Fluentui-Emoji-Flat-Fire-Flat.512.png);
+background-size: 100% 100%; */
+display: flex;
+align-items: center;
+color: #EB5F2D;
+font-size: larger;
+
+
+}
+.timeimg1{
+height:16%;
+width: 6%;
+top: 8%;
+/* background-color: pink; */
+position: absolute;
+right: 3%;
+background-image: url(./images/Robinweatherall-Chocolate-Mint-leaf.256.png);
+background-size: 100% 100%;
+
+}
+.timeimg2{
+height:16%;
+width: 5.5%;
+top: 8%;
+/* background-color: pink; */
+position: absolute;
+right: 3%;
+background-image: url(./images/vecteezy_white-checkmark-on-a-round-green-button_69410313.png);
+background-size: 100% 100%;
+
+}
+.timeimg3{
+height:19%;
+width: 7%;
+top: 7.5%;
+/* background-color: pink; */
+position: absolute;
+right: 3%;
+background-image: url(./images/—Pngtree—stars\ circle\ button_13164939.png);
+background-size: 100% 100%;
+
+}
+.textime p{
+ position: static;
+}
+.i1m1:hover{
+margin-top: -10px;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.download{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+}
+.download button{
+    height: 60px;
+    width: 300px;
+    background: linear-gradient(90deg, #EC6433, #F08965);
+    border: none;
+    border-radius: 50px;
+    transition: .2s;
+       box-shadow:
+  rgba(235, 95, 45, 0.5) 0px 20px 40px -20px,
+  rgba(0, 0, 0, 0.15) 0px 10px 25px -20px;
+}
+.download button:hover{
+      margin-top:-4px ;
+    box-shadow:
+  rgba(235, 95, 45, 0.5) 0px 20px 40px -15px,
+  rgba(0, 0, 0, 0.15) 0px 10px 25px -20px;
+
+}
+.download button a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
+.main5{
+height: 210vh;
+width: 100%;
+/* background-color: seagreen; */
+position: relative;
+}
+.baabe{
+       position: absolute;
+    color:#5D544F;
+    left: 26%;
+    top: 5%;
+    font-family: sans-serif;
+   
+}
+.baabe p{
+       /* position: absolute; */
+    color:#5D544F;
+ 
+    font-family: sans-serif;
+   
+}
+.chefira{
+ height: 90vh;
+ width: 100%;
+ display: flex;
+ /* background-color: silver; */
+ margin-top:    6em;
+}
+.childchefira{
+    height: 100%;
+    width: 50%;
+    /* background-color: turquoise; */
+    position: relative;
+}
+.childchefira:nth-child(1){
+    height: 100%;
+    width: 50%;
+    /* background-color:plum; */
+    position: relative;
+}
+.eche{
+    background-color: #EB5F2D;
+    height: 9%;
+    width:30%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    word-spacing: .2px;
+    letter-spacing: .9px;
+    font-family: sans-serif;
+    font-size: small;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+}
+.cefnm{
+    position: absolute;
+    /* background-color: yellowgreen; */
+    top: 23%;
+    left: 10%;
+    color: #291812;
+    font-size: xx-large;
+    
+}
+.cefnm h2{
+ font-family: "Playfair Display", serif;
+    
+}
+.yrch{
+    display: flex;
+    position: absolute;
+    top: 38%;
+    left: 10%;
+    /* background-color: yellowgreen; */
+}
+.yrch h2{
+    font-size: 80px;
+    font-family: sans-serif;
+    color: #EB5F2D;
+}
+.yrch p{
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-top: 3.5rem;
+    margin-left: 1rem;
+       color: #291812;
+       letter-spacing: 1px;
+}
+.pppp{
+    height: 100px;
+    width: 80%;
+    /* background-color: violet; */
+    position: absolute;
+    left: 10%;
+    top: 56%;
+     line-height: 1.7;
+     letter-spacing: .5px;
+     color: #291812;
+}
+.ltr1{
+    color:#291812;
+    position: absolute;
+    height: 70px;
+    width: 300px;
+    /* background-color: violet; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: medium;
+    font-family: sans-serif;
+    top: 80%;
+    left:10% ;
+        box-shadow: #EB5F2D -5px 0px 0px 0px;
+        transition: .2s;
+    
+}
+.ltr1 p{
+     font-family: sans-serif;
+}
+.ltr1 i{
+   color: #EB5F2D;
+   font-size: 25px;
+}
+.ltr{
+    color:#291812;
+    position: absolute;
+    height: 70px;
+    width: 300px;
+    /* background-color: violet; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: medium;
+    font-family: sans-serif;
+    top: 95%;
+    left:10% ;
+        box-shadow: #EB5F2D -5px 0px 0px 0px;
+        transition: .2s;
+    
+}
+.ltr:hover{
+    left:12% ;
+}
+.ltr1:hover{
+    left:12% ;
+}
+.ltr p{
+     font-family: sans-serif;
+      margin-right: 20px;
+}
+.ltr i{
+   color: #EB5F2D;
+   font-size: 25px;
+   /* margin-right: 10px; */
+}
+.chefimghov{
+    height: 87%;
+    width: 85%;
+    background-color: blanchedalmond;
+    position: absolute;
+    top: 13%;
+    left: 1%;
+    overflow: hidden;
+      border-radius: 20px;
+       /* transition: 1s; */
+}
+.chefimghov:hover .hovimgcef{
+   transform: scale(1.1);
+}
+.chefimghov:hover .sign{
+   transform: scale(1.1);
+}
+.hovimgcef{
+    height: 100%;
+    width: 100%;
+    background: url(./images/chef-11.webp);
+    background-size: 100% 100%;
+    /* background-position: 60%; */
+    border-radius: 20px;
+    transition: .5s;
+}
+.signature{
+    position: absolute;
+    height: 50px;
+    width: 160px;
+    background-color: white;
+    bottom: 6%;
+    right: 6%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 21;
+     transition: .5s;
+}
+.sign{
+    height: 70%;
+    width: 70%;
+    background: url(./images/signature-1\ \(1\).webp);
+    background-size: 100% 100%;
+      transition: .5s;
+    /* border-radius: 20px; */
+
+}
+
+.chefline{
+    height: 80vh;
+    width: 100%;
+    /* background-color: papayawhip; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+
+}
+.chefcard96{
+    height: 90%;
+    width: 20%;
+    background-color: white;
+    border-radius: 20px;
+    transition: 0.4s;
+    overflow: hidden;
+    transition-delay: 0.1s;
+}
+.chefcard96:hover {
+    margin-top: -20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+.chefcard96:hover .cheftpimg96 {
+   
+transform: scale(1.1);
+}
+.chefcard96:hover .cheftpimg97 {
+   
+transform: scale(1.1);
+}
+.chefcard96:hover .cheftpimg98 {
+   
+transform: scale(1.1);
+}
+.chefcard96:hover .cheftpimg99 {
+   
+transform: scale(1.1);
+}
+.cheftpimg96{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    background: url(./images/cheftp-1.webp);
+    background-size: 100% 100%;
+     transition: 0.4s;
+
+}
+.cheftpimg97{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    background: url(./images/cheftp-2.webp);
+    background-size: 100% 100%;
+     transition: 0.4s;
+
+}
+
+.cheftpimg98{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    background: url(./images/cheftp-3.webp);
+    background-size: 100% 100%;
+     transition: 0.4s;
+
+}
+.cheftpimg99{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    background: url(./images/cheftp-4.webp);
+    background-size: 100% 100%;
+     transition: 0.4s;
+
+}
+.btmchef96{
+    height: 44%;
+    width: 100%;
+    /* background-color: black; */
+     border-radius: 0px 0px 20px 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+.btmtxt96{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellowgreen; */
+    flex-direction: column;
+    gap: 15px;
+    /* position: relative; */
+}
+.btmtxt96 h2{
+    color:#291812;
+    margin-top: -1rem;
+}
+.btmtxt96 h3{
+    color: #EB5F2D;
+}
+.btmtxt96 p{
+   /* position: absolute; */
+    color: #5D544F;
+    position: static;
+    margin-top: .5rem;
+    margin-left: .7rem;
+}
+
+.events {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  background-color: #FFF9F7;
+  align-items: center;
+}
+
+
+.events__content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #2f1b12;
+  margin-bottom: 24px;
+}
+
+.events__content p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 460px;
+  color: #6b6b6b;
+  margin-bottom: 48px;
+}
+
+.stats {
+  display: flex;
+  gap: 64px;
+}
+
+.stat__number {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  color: #f26b2e;
+}
+
+.stat__label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a8a8a;
+}
+
+
+.events__image {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 18px;
+  background: url(./images/aiaiaia.webp);
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+
+.cta {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  background-color: #ffffff;
+  padding: 18px 28px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2f1b12;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.cta__icon {
+  font-size: 18px;
+}
+.oppo{
+    height: 56%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.cx-contact-scope {
+  --cx-orange: #f26430;
+  --cx-orange-soft: #fde7dd;
+  --cx-text-main: #2f1b12;
+  --cx-text-muted: #6b6b6b;
+  --cx-border-neutral: #dcdcdc;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  font-family: "Inter", sans-serif;
+  color: var(--cx-text-main);
+}
+
+
+.cx-contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.cx-contact-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+}
+
+.cx-contact-accent {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--cx-orange);
+  margin: 14px auto;
+}
+
+.cx-contact-subtext {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--cx-text-muted);
+}
+
+.cx-contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+}
+
+.cx-contact-panel-info {
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  border-top: 4px solid var(--cx-orange);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.cx-info-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+.cx-info-accent {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--cx-orange);
+  margin: 12px 0 20px;
+}
+
+.cx-info-description {
+  line-height: 1.7;
+  color: var(--cx-text-muted);
+  margin-bottom: 28px;
+}
+
+.cx-info-list {
+  list-style: none;
+}
+
+.cx-info-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.cx-info-item i {
+  color: var(--cx-orange);
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+
+.cx-info-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.cx-social-chip {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--cx-orange-soft);
+  color: var(--cx-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.cx-social-chip:hover {
+  background: var(--cx-orange);
+  color: #fff;
+}
+
+
+.cx-contact-panel-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  border-top: 4px solid var(--cx-orange);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.cx-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.cx-input-block {
+  margin-bottom: 24px;
+}
+
+.cx-input-block label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.cx-input-block input{
+     width: 90%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--cx-border-neutral);
+  font-family: inherit;
+  transition: 0.3s ease;
+}
+.cx-input-block textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--cx-border-neutral);
+  font-family: inherit;
+  transition: 0.3s ease;
+}
+
+.cx-input-block textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+.cx-input-block input:focus,
+.cx-input-block textarea:focus {
+  outline: none;
+  border-color: var(--cx-orange);
+  box-shadow: 0 0 0 2px rgba(242,100,48,0.15);
+}
+
+.cx-submit-action {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: none;
+  background: var(--cx-orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cx-submit-action:hover {
+  background: #f57a4d;
+  transform: translateY(-4px);
+}
+.ak-footer-scope {
+  --ak-orange: #f26430;
+  --ak-text-dark: #2f1b12;
+  --ak-text-muted: #8a8a8a;
+
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding: 28px 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.ak-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.ak-footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ak-footer-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: var(--ak-text-dark);
+}
+
+.ak-footer-note {
+  font-size: 13px;
+  color: var(--ak-text-muted);
+}
+
+
+.ak-footer-credit {
+  font-size: 13px;
+  color: var(--ak-text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ak-footer-credit strong {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: var(--ak-orange);
+}
+</style>
+
+
+<body>
+    <div class="navi">
+
+        <h1>Savora</h1>
+       <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Chefs</a></li>
+            <li><a href="">Events</a></li>
+<li><a href="" >DropDown<i class="fa-solid fa-caret-down"style="font-size:10px;"></i></a>
+  
+     
+     <ul>
+        <li><a href="">DropDown1</a></li>
+        <li><a href="">DeepDropDown<i class="fa-solid fa-caret-down"style="font-size:10px;"></i></a>
+        <ul>
+            <li><a href="">Deep1</a></li>
+            <li><a href="">Deep2</a></li>
+            <li><a href="">Deep3</a></li>
+            <li><a href="">Deep4</a></li>
+            <li><a href="">Deep5</a></li>
+        </ul>
+        </li>
+        <li><a href="">DropDown2</a></li>
+        <li><a href="">DropDown3</a></li>
+        <li><a href="">DropDown4</a></li>
+    </ul>
+   
+
+
+</li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+       </nav>
+  <button><a href="">Book a Table</a></button>
+    </div>
+
+
+ <div class="maina">
+
+
+    <div class="macho">
+        <div class="machoa">
+          <div class="hh">
+    <h1>Savor Authentic Mediterranean Cuisine</h1>
+        <br> <br>
+    <p>Savor authentic Mediterranean cuisine crafted with fresh ingredients and time onored recipes. Discover vibrant flavors, wholesome traditions, and a warm dining experience inspired by coastal cultures. Experience the rich flavors of traditional Mediterranean cooking in an elegant atmosphere.</p>
+    </div> <br>
+<div class="jj">
+<div class="j1">
+
+ <button> <a href="">BOOK A TABLE</a></button>
+
+ <button><a href="">VIEW MENU</a></button>
+
+
+
+
+</div>
+<div class="j2">
+<div class="jjjj">
+    <div class="font"><i class="fa-regular fa-clock"></i></div>
+    <div class="ftft">
+        <div class="ft1">
+            <p>OPEN DAILY</p>
+        </div>
+        <div class="ft2">
+            <p>11:00 AM - 10:30 PM</p>
+        </div>
+    </div>
+</div>
+<div class="jjhh">
+     <div class="font"><i class="fa-solid fa-location-dot"></i></i></div>
+     <div class="ftft">
+        <div class="ft1">
+            <p>LOCATION</p>
+        </div>
+        <div class="ft2">
+            <p>Downtown Culinary District</p>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+        </div>
+    </div>
+
+
+    <div class="nacho">
+      <div class="imggg">
+          <div class="bigimg">
+             <!-- <img src="./images/11.webp" alt=""> -->
+        </div>
+      </div>
+
+      <div class="smallimg">
+        <div class="imgimg">
+        </div>
+      </div>
+
+      <div class="smallimgg">
+        <div class="imgimgg">
+        </div>
+      </div>
+
+ </div>
+    </div>
+
+      <br>
+<div class="main2">
+
+<div class="chefimg">
+    <div class="abtchef">
+        <h2>25+</h2> <br>
+        <p>Years of Culinary Excellence</p>
+    </div>
+</div>
+
+<div class="texttxt">
+
+    <div class="meet">
+<h1>Meet Our Executive Chef</h1> <br>
+<h3>Crafting memorable dining experiences since 1999</h3>
+<br>
+<p>From thoughtfully curated menus to artfully presented cuisine, every detail reflects a commitment to excellence and authenticity. Whether elevating traditional favorites or introducing bold new creations, our Executive Chef’s vision ensures each dining experience is both refined and unforgettable</p>
+<br>
+<p>With a focus on thoughtful presentation and bold yet balanced flavors, every meal is designed to be savored, leaving a lasting impression long after the last bite.</p>
+    </div>
+
+    <div class="achi">
+
+    <div class="award">
+       <div class="fon"><i class="fa-solid fa-award"></i></div>
+       <div class="namam">
+        <p>James Beard Award</p>
+       </div>
+    </div> 
+
+    <div class="recog">
+        <div class="fon"><i class="fa-regular fa-star"></i></div>
+        <div class="namam">
+        <p>Michelin Recognition</p>
+       </div>
+    </div>
+
+    </div>
+<br>
+    <div class="qut">
+ <q> Cooking is not just about feeding people; it's about creating <br> moments that bring families and friends together around the <br> table. </q>  <br>
+ <strong>- Chef Alessandro Romano</strong>
+    </div>
+
+
+  <div class="last">
+
+    <button><a href="">VIEW MENU</a></button>
+    <button> <a href="">BOOK A TABLE</a></button>
+
+ 
+  </div>
+
+
+
+</div>
+
+</div>
+<br> <br> 
+
+
+<div class="main3">
+<div class="cimg">
+    <div class="data">
+        <h3>Elegant Dining</h3>
+        <p>Sophisticated ambiance for every occasion</p>
+    </div>
+</div>
+<div class="cimg">
+      <div class="data">
+        <h3>Elegant Dining</h3>
+        <p>Sophisticated ambiance for every occasion</p>
+    </div>
+</div>
+<div class="cimg">
+      <div class="data">
+        <h3>Elegant Dining</h3>
+        <p>Sophisticated ambiance for every occasion</p>
+    </div>
+</div>
+</div>
+ <br> <br> <br>
+<div class="main4">
+
+    <div class="baab"> <h1>Menu</h1>  </div>
+    <p>Our menu brings together fresh ingredients, balanced flavors, and thoughtful choices for everyone.
+</p> <br> <br> <br> <br> <br>
+
+<div class="butt4">
+   <button> <a href=""><i class="fa-solid fa-bowl-food">&nbsp;</i>Starters</a></button>
+   <button> <a href=""><i class="fa-solid fa-bowl-rice"></i>&nbsp;Main Courses</a></button>
+   <button> <a href=""><i class="fa-solid fa-cake-candles"></i>&nbsp;Desserts</a></button>
+   <button> <a href=""><i class="fa-solid fa-beer-mug-empty"></i>&nbsp;Beverages</a></button></div>
+
+<div class="imgmo">
+
+<div class="i1m1">
+    <div class="tpimg123"> <div class="abso"> <h3>CHEF’S PICK</h3></div> <div class="bgstts"></div> </div>
+    <div class="btmtext">
+         <div class="timeimg"></div>
+        <div class="textime">
+                    <h2>Crispy Calamari Rings</h2> <br> <br> <p>A classic crowd-pleaser, known and loved for their light crunch and tender bite. 
+        </div>
+        <div class="timetxt"><i class="fa-solid fa-dollar-sign"></i> <strong> 18</strong> </div>
+    </div>
+</div>
+
+<div class="i1m1">
+    <div class="tpimg123"> <div class="bgsttss"></div> </div>
+    <div class="btmtext">
+        <div class="timeimg1"> </div>
+          <div class="textime">
+                    <h2>Truffle Arancini</h2> <br> <br> <p>An indulgent bites of comfort and luxury. Creamy risotto infused with truffle is shaped into golden spheres.
+        </div>
+        <div class="timetxt"><i class="fa-solid fa-dollar-sign"></i> <strong>16</strong></div>
+    </div>
+</div>
+</div>
+<br> 
+<div class="imgmo">
+
+<div class="i1m1">
+    <div class="tpimg123"> <div class="bgsttsss"></div> </div>
+    <div class="btmtext">
+         <div class="timeimg2"></div>
+          <div class="textime">
+                    <h2>Salmon Ceviche</h2> <br> <br> <p>A light, vibrant, and refreshing. Fresh salmon is cured gently in citrus juices.
+        </div>
+        <div class="timetxt"> <i class="fa-solid fa-dollar-sign"></i> <strong>22</strong></div>
+    </div>
+</div>
+ 
+<div class="i1m1">
+    <div class="tpimg123"> <div class="bgstttss"></div> </div>
+    <div class="btmtext">
+         <div class="timeimg3"></div>
+          <div class="textime">
+                    <h2>Beef Tartare</h2> <br> <br> <p>A refined classic that celebrates the purity of high-quality beef. Finely hand-chopped.
+        </div>
+        <div class="timetxt"><i class="fa-solid fa-dollar-sign"></i> <strong> 28</strong> </div>
+    </div>
+    </div>
+</div>
+<br> <br> 
+<div class="download">
+<button><a href=""> <i class="fa-solid fa-download"></i>&nbsp; Download Full Menu &nbsp;PDF</a></button>
+</div>
+
+</div> <br> <br> <br> <br> <br> <br> <br>
+
+
+<div class="main5">
+
+ <div class="baab"> <h1>Chefs</h1>  </div>
+   <div class="baabe"> <p>Our Chefs are the heart of the kitchen, bringing passion, precision, and creativity to every dish.</p></div>
+
+ <div class="chefira">
+    <div class="childchefira">
+ 
+        <div class="eche"><i class="fa-solid fa-award"></i> &nbsp;EXECUTIVE CHEF</div>
+        <div class="cefnm"> <h2>Eliot Johnson</h2> </div>
+        <div class="yrch"><h2>15+</h2> <p>YEARS OF EXCELLENCE</p></div>
+        <div class="pppp"><p>With more than a decade and a half of proven expertise, Eliot Johnson continues to set benchmarks in reliability and performance. The journey is defined not just by time, but by the confidence of those who choose excellence—year after year.</p></div>
+        <div class="ltr1">
+            <i class="fa-solid fa-trophy"></i> <p>Culinary Excellence Award 2023</p>
+        </div>
+        <div class="ltr">
+            <i class="fa-solid fa-star"></i> <p>Michelin Featured Restaurant</p>
+        </div>
+
+
+    </div>
+    <div class="childchefira">
+        <div class="chefimghov">
+            <div class="signature">
+                    <div class="sign"></div>
+                </div>
+            <div class="hovimgcef">
+                
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <br><br> <br> <br> <br>
+
+ <div class="chefline">
+
+  <div class="chefcard96">
+    <div class="oppo"><div class="cheftpimg96"></div></div>
+    <div class="btmchef96">
+        <div class="btmtxt96">
+            <h2>Elena Vasquez</h2> <h3>Head Pastry Chef</h3> <p>expertise in artisan desserts,<br>
+                &nbsp;&nbsp;&nbsp;plated pastries, and bake <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operations.</p>
+        </div>
+    </div>
+  </div>
+  <div class="chefcard96">
+    <div class="oppo"><div class="cheftpimg97"></div></div>
+       <div class="btmchef96">
+        <div class="btmtxt96">
+            <h2>David Thompson</h2> <h3>Sous Chef</h3> <p>expertise in artisan desserts,<br>
+                &nbsp;&nbsp;&nbsp;plated pastries, and bake <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operations.</p>
+        </div>
+    </div>
+  </div>
+  <div class="chefcard96">
+    <div class="oppo"><div class="cheftpimg98"></div></div>
+       <div class="btmchef96">
+        <div class="btmtxt96">
+            <h2>Maria Santos</h2> <h3>Kitchen Manager</h3> <p>expertise in artisan desserts,<br>
+                &nbsp;&nbsp;&nbsp;plated pastries, and bake <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operations.</p>
+        </div>
+    </div>
+  </div>
+  <div class="chefcard96">
+    <div class="oppo"><div class="cheftpimg99"></div></div>
+       <div class="btmchef96">
+        <div class="btmtxt96">
+            <h2>Roberto Kim</h2> <h3>Wine Sommelier</h3> <p>expertise in artisan desserts,<br>
+                &nbsp;&nbsp;&nbsp;plated pastries, and bake <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operations.</p>
+        </div>
+    </div>
+  </div>
+ </div>
+
+</div>
+
+ <section class="events">
+    <div class="events__content">
+      <h1>
+        Exceptional Events & Private Dining
+      </h1>
+
+      <p>
+        From intimate celebrations to grand gatherings, our private dining
+        experiences are designed to impress. Enjoy refined menus, elegant
+        surroundings, and attentive service tailored to your occasion.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__number">500+</span>
+          <span class="stat__label">Events Hosted</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat__number">200</span>
+          <span class="stat__label">Max Capacity</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="events__image">
+      <!-- <img src="./images/aiaiaia.webp" alt=""> -->
+      <div class="cta">
+        <div class="cta__icon">📅</div>
+        <span>Book Your Event Today</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cx-contact-scope">
+
+  <header class="cx-contact-header">
+    <h1 class="cx-contact-title">Contact</h1>
+    <span class="cx-contact-accent"></span>
+    <p class="cx-contact-subtext">
+     Contact us for reservations, private dining inquiries, or any assistance you may need.
+    </p>
+  </header>
+
+  <div class="cx-contact-layout">
+
+    <!-- LEFT PANEL -->
+    <aside class="cx-contact-panel-info">
+      <h2 class="cx-info-heading">Contact Information</h2>
+      <span class="cx-info-accent"></span>
+
+      <p class="cx-info-description">
+        Feel free to reach out with any questions about Menu,
+        speaking engagements, or media inquiries.
+      </p>
+
+      <ul class="cx-info-list">
+        <li class="cx-info-item">
+          <i class="fa-regular fa-envelope"></i>
+          <div>
+            <strong>Email:</strong>
+            <span>author@example.com</span>
+          </div>
+        </li>
+
+        <li class="cx-info-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <strong>Phone:</strong>
+            <span>+1 (555) 123-4567</span>
+          </div>
+        </li>
+
+        <li class="cx-info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Address:</strong>
+            <span>
+              123 Book Street, Literary Lane<br>
+              Wordsmith City, NY 10001
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="cx-info-socials">
+        <a class="cx-social-chip" href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a class="cx-social-chip" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a class="cx-social-chip" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="cx-social-chip" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </aside>
+
+    <!-- RIGHT PANEL -->
+    <div class="cx-contact-panel-form">
+      <form class="cx-form-shell">
+
+        <div class="cx-form-row">
+          <div class="cx-input-block">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Doe">
+          </div>
+
+          <div class="cx-input-block">
+            <label>Your Email</label>
+            <input type="email" placeholder="john@example.com">
+          </div>
+        </div>
+
+        <div class="cx-input-block">
+          <label>Subject</label>
+          <input type="text" placeholder="Need Assistance">
+        </div>
+
+        <div class="cx-input-block">
+          <label>Message</label>
+          <textarea placeholder="Your message here..."></textarea>
+        </div>
+
+        <button class="cx-submit-action" type="submit">
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<footer class="ak-footer-scope">
+  <div class="ak-footer-inner">
+
+    <div class="ak-footer-left">
+      <span class="ak-footer-brand">Exceptional Dining</span>
+      <span class="ak-footer-note">Crafted with passion & precision</span>
+    </div>
+
+    <div class="ak-footer-right">
+      <span class="ak-footer-credit">
+        Made by <strong>ACE KHAN</strong>
+      </span>
+    </div>
+
+  </div>
+</footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
+
+
