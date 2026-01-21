@@ -1834,6 +1834,25 @@ transform: scale(1.1);
   letter-spacing: 0.18em;
   color: var(--ak-orange);
 }
+
+     html {
+        scroll-behavior: smooth;
+    }
+    #Menu {
+  scroll-margin-top: 110px;
+}
+    #About {
+  scroll-margin-top: 110px;
+}
+    #Chef {
+  scroll-margin-top: 110px;
+}
+    #Contact {
+  scroll-margin-top: 110px;
+}
+    #Event {
+  scroll-margin-top: 110px;
+}
 </style>
 
 
@@ -1843,11 +1862,11 @@ transform: scale(1.1);
         <h1>Savora</h1>
        <nav>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Chefs</a></li>
-            <li><a href="">Events</a></li>
+             <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Chef">Chefs</a></li>
+                <li><a href="#Event">Events</a></li>
 <li><a href="" >DropDown<i class="fa-solid fa-caret-down"style="font-size:10px;"></i></a>
   
      
@@ -1870,14 +1889,14 @@ transform: scale(1.1);
 
 
 </li>
-            <li><a href="">Contacts</a></li>
+         <li><a href="#Contact">Contacts</a></li>
         </ul>
        </nav>
   <button><a href="">Book a Table</a></button>
     </div>
 
 
- <div class="maina">
+  <div class="maina" id="Home">
 
 
     <div class="macho">
@@ -1959,7 +1978,7 @@ transform: scale(1.1);
 
 <div class="texttxt">
 
-    <div class="meet">
+     <div class="meet" id="About">
 <h1>Meet Our Executive Chef</h1> <br>
 <h3>Crafting memorable dining experiences since 1999</h3>
 <br>
@@ -2031,7 +2050,7 @@ transform: scale(1.1);
  <br> <br> <br>
 <div class="main4">
 
-    <div class="baab"> <h1>Menu</h1>  </div>
+    <div class="baab"> <h1 id="Menu">Menu</h1>  </div>
     <p>Our menu brings together fresh ingredients, balanced flavors, and thoughtful choices for everyone.
 </p> <br> <br> <br> <br> <br>
 
@@ -2100,7 +2119,7 @@ transform: scale(1.1);
 
 <div class="main5">
 
- <div class="baab"> <h1>Chefs</h1>  </div>
+ <div class="baab">     <h1 id="Chef">Chefs</h1>  </div>
    <div class="baabe"> <p>Our Chefs are the heart of the kitchen, bringing passion, precision, and creativity to every dish.</p></div>
 
  <div class="chefira">
@@ -2175,7 +2194,7 @@ transform: scale(1.1);
 
 </div>
 
- <section class="events">
+ <section class="events" id="Event">
     <div class="events__content">
       <h1>
         Exceptional Events & Private Dining
@@ -2221,7 +2240,7 @@ transform: scale(1.1);
 
   <div class="cx-contact-layout">
 
-    <!-- LEFT PANEL -->
+    
     <aside class="cx-contact-panel-info">
       <h2 class="cx-info-heading">Contact Information</h2>
       <span class="cx-info-accent"></span>
@@ -2332,5 +2351,6 @@ transform: scale(1.1);
       </script>
 </body>
 </html>
+
 
 
